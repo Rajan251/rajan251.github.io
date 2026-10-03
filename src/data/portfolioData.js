@@ -11,32 +11,80 @@ export const personalInfo = {
   headline: "I build and automate reliable infrastructure.",
   subtitle: "DevOps Engineer with 2+ years of experience working across AWS, CI/CD, containers, observability and production infrastructure.",
   coreStack: ["AWS", "Docker", "Jenkins", "Kubernetes", "Terraform"],
-  status: "Open to DevOps / Cloud opportunities"
+  status: "Open to Full-Time Roles & Freelance DevOps Projects"
 };
 
 export const impactMetrics = [
   {
     value: "2+",
-    label: "Years Experience"
+    label: "Years Experience",
+    subtext: "Production DevOps & Systems"
   },
   {
     value: "8+",
-    label: "Applications in CI/CD"
+    label: "Applications in CI/CD",
+    subtext: "Automated via Jenkins & AWS"
   },
   {
     value: "60%",
-    label: "Deployment Time Reduced"
+    label: "Deployment Time Reduced",
+    subtext: "Via containerization & caching"
   },
   {
     value: "99.9%",
-    label: "Reported Uptime"
+    label: "Reported Uptime",
+    subtext: "Auto-scaling & self-healing infra"
+  }
+];
+
+export const servicesData = [
+  {
+    id: "cicd",
+    number: "01",
+    title: "CI/CD Pipeline Automation",
+    tagline: "Accelerate delivery without sacrificing safety",
+    description: "Designing zero-touch build, test, and release pipelines using Jenkins, Docker, and GitHub Actions. Integrated automated testing, SonarQube security gates, and multi-environment rollouts.",
+    deliverables: ["Automated build & test pipelines", "Quality gates & vulnerability scanning", "Zero-downtime deployment workflows", "Rollback automation"]
+  },
+  {
+    id: "aws",
+    number: "02",
+    title: "AWS Cloud Infrastructure",
+    tagline: "Resilient, auto-scaling cloud architecture",
+    description: "Architecting high-availability infrastructure on AWS with VPC network segregation, Application Load Balancers (ALB), Auto Scaling Groups, and CloudWatch alarms targeting 99.9% uptime.",
+    deliverables: ["VPC network & security groups", "Auto Scaling & Load Balancing", "S3, IAM & RDS provisioning", "CloudWatch alerts & cost tuning"]
+  },
+  {
+    id: "containers",
+    number: "03",
+    title: "Docker & Kubernetes Orchestration",
+    tagline: "Lean container builds & scalable cluster deployments",
+    description: "Containerizing backend services with multi-stage Docker builds (reducing image size by up to 40%). Deploying multi-node Kubernetes microservices with Helm, HPA, and Ingress routing.",
+    deliverables: ["Multi-stage Dockerfile optimization", "Kubernetes cluster configuration", "Helm charts & declarative manifests", "Dynamic HPA workload scaling"]
+  },
+  {
+    id: "observability",
+    number: "04",
+    title: "Observability & Alerting Stack",
+    tagline: "Sub-second visibility to cut MTTR by 30%",
+    description: "Deploying production-grade telemetry stacks combining Prometheus for time-series metrics, Grafana for visual dashboards, Loki for central logging, and New Relic APM for database query tuning.",
+    deliverables: ["Custom Grafana production dashboards", "Prometheus alerts & threshold rules", "Centralized Loki container logs", "APM query & latency profiling"]
+  },
+  {
+    id: "automation",
+    number: "05",
+    title: "Disaster Recovery & Automation",
+    tagline: "Eliminating manual toil with Python & Shell",
+    description: "Building automated backup systems achieving a 100% success rate, executing minimal-downtime database migrations with automated rollback procedures, and automating OS security patch cycles.",
+    deliverables: ["100% automated backup routines", "Zero-downtime DB migration scripts", "Python & Bash operations scripts", "SSL renewal & patch management"]
   }
 ];
 
 export const aboutData = {
   heading: "A little about me",
   bio: "DevOps Engineer focused on building reliable infrastructure, automating software delivery and improving production visibility. My experience spans AWS, Docker, Jenkins, monitoring, Linux systems and hybrid cloud/on-premises environments.",
-  currentRole: "DevOps Engineer @ DJT Corporation Investments"
+  currentRole: "DevOps Engineer @ DJT Corporation Investments",
+  availability: "Available for full-time engineering roles and targeted freelance DevOps consulting projects."
 };
 
 export const experienceData = [
@@ -71,11 +119,17 @@ export const projectsData = [
   {
     number: "01",
     title: "Multi-Environment CI/CD",
-    tag: null,
+    tag: "Production Architecture",
     technologies: ["Jenkins", "Docker", "AWS", "SonarQube", "GitHub"],
     description: "Automated build, test and deployment workflow across development, staging and production with Docker and SonarQube quality gates.",
     highlight: "40% smaller Docker images",
-    flow: ["GitHub", "Jenkins", "SonarQube", "Docker", "AWS"]
+    flow: ["GitHub", "Jenkins", "SonarQube", "Docker", "AWS"],
+    telemetry: {
+      buildTime: "1m 42s",
+      securityGate: "PASSED (A-Grade)",
+      imageReduction: "-40% footprint",
+      environments: "Dev → Staging → Prod"
+    }
   },
   {
     number: "02",
@@ -83,8 +137,14 @@ export const projectsData = [
     tag: "Personal Project",
     technologies: ["Kubernetes", "Docker", "Helm", "AWS"],
     description: "Multi-node Kubernetes environment for containerized microservices with Helm, HPA, ingress and persistent storage.",
-    highlight: null,
-    flow: ["Ingress", "Services", "Pods", "Persistent Storage"]
+    highlight: "Auto-Scales on Traffic",
+    flow: ["Ingress", "Services", "Pods", "Persistent Storage"],
+    telemetry: {
+      clusterType: "Multi-Node Microservices",
+      scaler: "Horizontal Pod Autoscaler (HPA)",
+      packaging: "Declarative Helm Charts",
+      routing: "TLS Ingress Controller"
+    }
   }
 ];
 

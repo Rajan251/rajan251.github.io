@@ -16,6 +16,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'About', href: '#about' },
+    { label: 'Services', href: '#services' },
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
@@ -26,18 +27,24 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         scrolled
-          ? 'bg-[#090a0f]/90 backdrop-blur-md border-b border-white/[0.08] py-3.5'
+          ? 'bg-[#090a0f]/90 backdrop-blur-md border-b border-white/[0.08] py-3.5 shadow-lg shadow-black/40'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-content mx-auto px-6 flex items-center justify-between">
-        {/* Left: Brand */}
-        <a
-          href="#"
-          className="text-sm font-semibold tracking-wider text-neutral-100 hover:text-white transition-colors uppercase font-mono"
-        >
-          RAJAN KUMAR
-        </a>
+        {/* Left: Brand + Status Pill */}
+        <div className="flex items-center gap-3">
+          <a
+            href="#"
+            className="text-sm font-semibold tracking-wider text-neutral-100 hover:text-white transition-colors uppercase font-mono flex items-center gap-2"
+          >
+            <span>RAJAN KUMAR</span>
+          </a>
+          <span className="hidden sm:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Available
+          </span>
+        </div>
 
         {/* Right: Nav Links + Resume Button (Desktop) */}
         <div className="hidden md:flex items-center gap-6">
@@ -58,7 +65,7 @@ export default function Navbar() {
           <a
             href={personalInfo.resumeUrl}
             download="Rajan_Kumar_DevOps_Resume.pdf"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium text-neutral-200 bg-white/[0.04] border border-white/[0.1] hover:bg-white/[0.08] hover:border-white/[0.2] hover:text-white transition-all"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium text-neutral-200 bg-white/[0.04] border border-white/[0.1] hover:bg-sky-500/10 hover:border-sky-500/30 hover:text-sky-300 transition-all"
           >
             <ArrowDownToLine className="w-3.5 h-3.5 text-neutral-400" />
             <span>Download Resume</span>
@@ -79,7 +86,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0c0e15] border-b border-white/[0.08] px-6 py-4 space-y-3">
+        <div className="md:hidden bg-[#0c0e15] border-b border-white/[0.08] px-6 py-4 space-y-3 shadow-2xl">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -94,7 +101,7 @@ export default function Navbar() {
             <a
               href={personalInfo.resumeUrl}
               download="Rajan_Kumar_DevOps_Resume.pdf"
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium text-neutral-100 bg-white/[0.06] border border-white/[0.1] w-full justify-center"
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium text-neutral-100 bg-sky-500/10 border border-sky-500/30 w-full justify-center text-sky-300"
             >
               <ArrowDownToLine className="w-3.5 h-3.5" />
               <span>Download Resume</span>
