@@ -8,86 +8,64 @@
   }
 
   body {
-    background-color: #080c14;
+    background-color: #090a0f;
     color: #e2e8f0;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
-  /* Custom subtle scrollbar */
+  /* Subtle minimal scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #080c14;
+    background: #090a0f;
   }
   ::-webkit-scrollbar-thumb {
-    background: #1e293b;
-    border-radius: 4px;
+    background: #1e2638;
+    border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #06b6d4;
+    background: #2e3b54;
   }
 }
 
-/* Background grid utility */
-.bg-devops-grid {
-  background-size: 32px 32px;
+/* Subtle background grid pattern */
+.bg-minimal-grid {
+  background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
 }
 
-.bg-devops-dots {
-  background-size: 24px 24px;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-}
-
-/* Glassmorphism card utility */
-.glass-panel {
-  background: rgba(13, 19, 34, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.glass-panel:hover {
-  border-color: rgba(6, 182, 212, 0.25);
-}
-
-.glass-card {
-  background: linear-gradient(180deg, rgba(17, 24, 44, 0.8) 0%, rgba(13, 19, 34, 0.9) 100%);
-  backdrop-filter: blur(10px);
+/* Linear-style surface card */
+.minimal-card {
+  background-color: #0f121a;
   border: 1px solid rgba(255, 255, 255, 0.07);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.glass-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(6, 182, 212, 0.35);
-  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.15);
+.minimal-card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  background-color: #121622;
 }
 
-/* Code block / terminal styling */
-.terminal-window {
-  background: #090e1a;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.8), 0 0 30px -5px rgba(6, 182, 212, 0.15);
+/* Subtle code pill */
+.tech-tag {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 0.375rem;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.15s ease;
 }
 
-/* Neon Glow badge */
-.glow-badge {
-  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
-}
-
-/* Subtle gradient text */
-.text-gradient {
-  background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-cyan {
-  background: linear-gradient(135deg, #38bdf8 0%, #06b6d4 50%, #10b981 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.tech-tag:hover {
+  color: #f1f5f9;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
 }

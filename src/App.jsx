@@ -1,38 +1,36 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Impact from './components/Impact';
 import About from './components/About';
-import Metrics from './components/Metrics';
-import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
 import Architecture from './components/Architecture';
-import Certifications from './components/Certifications';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-devops-bg text-slate-100 flex flex-col font-sans selection:bg-devops-cyan selection:text-devops-dark">
-      {/* Top Navbar */}
+    <div className="min-h-screen bg-[#090a0f] text-neutral-200 flex flex-col font-sans selection:bg-sky-500/20 selection:text-sky-300">
+      {/* Minimal Sticky Navbar */}
       <Navbar />
 
       {/* Main Content Area */}
       <main className="flex-grow">
         <Hero />
+        <Impact />
         <About />
-        <Metrics />
-        <Skills />
         <Experience />
         <Projects />
+        <Skills />
         <Architecture />
-        <Certifications />
         <Education />
         <Contact />
       </main>
 
-      {/* Footer */}
+      {/* Minimal Footer */}
       <Footer />
     </div>
   );
