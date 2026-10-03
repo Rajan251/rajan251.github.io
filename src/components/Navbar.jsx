@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowDownToLine } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Navbar() {
@@ -46,7 +46,7 @@ export default function Navbar() {
           </span>
         </div>
 
-        {/* Right: Nav Links + Resume Button (Desktop) */}
+        {/* Right: Nav Links (Desktop) */}
         <div className="hidden md:flex items-center gap-6">
           <nav className="flex items-center gap-6 text-xs text-neutral-400 font-medium">
             {navLinks.map((link) => (
@@ -59,17 +59,6 @@ export default function Navbar() {
               </a>
             ))}
           </nav>
-
-          <div className="h-3.5 w-[1px] bg-white/10" />
-
-          <a
-            href={personalInfo.resumeUrl}
-            download="Rajan_Kumar_DevOps_Resume.pdf"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium text-neutral-200 bg-white/[0.04] border border-white/[0.1] hover:bg-sky-500/10 hover:border-sky-500/30 hover:text-sky-300 transition-all"
-          >
-            <ArrowDownToLine className="w-3.5 h-3.5 text-neutral-400" />
-            <span>Download Resume</span>
-          </a>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -97,16 +86,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <div className="pt-2 border-t border-white/[0.08]">
-            <a
-              href={personalInfo.resumeUrl}
-              download="Rajan_Kumar_DevOps_Resume.pdf"
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium text-neutral-100 bg-sky-500/10 border border-sky-500/30 w-full justify-center text-sky-300"
-            >
-              <ArrowDownToLine className="w-3.5 h-3.5" />
-              <span>Download Resume</span>
-            </a>
-          </div>
         </div>
       )}
     </header>

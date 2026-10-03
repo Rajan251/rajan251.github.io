@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, ArrowUpRight, ArrowDownToLine, Copy, Check, Briefcase, Zap, Clock } from 'lucide-react';
+import { Mail, ArrowUpRight, Copy, Check, Briefcase, Zap, Clock } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Contact() {
@@ -110,15 +110,6 @@ export default function Contact() {
             >
               <span>GitHub</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-neutral-400" />
-            </a>
-
-            <a
-              href={personalInfo.resumeUrl}
-              download="Rajan_Kumar_DevOps_Resume.pdf"
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-md bg-white/[0.04] border border-white/[0.08] text-neutral-300 text-xs font-medium hover:bg-white/[0.08] hover:text-white hover:border-white/[0.16] transition-all"
-            >
-              <ArrowDownToLine className="w-3.5 h-3.5 text-neutral-400" />
-              <span>Download Resume</span>
             </a>
           </div>
 
